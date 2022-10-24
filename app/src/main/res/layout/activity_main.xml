@@ -75,11 +75,14 @@
             android:layout_height="wrap_content"
             android:text="记住密码" />
 
-        <CheckBox
+        <TextView
+            android:id="@+id/forget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:text="忘记密码" />
+            android:text="忘记密码?"
+            android:onClick="GoSecond"
+            tools:ignore="OnClick" />
     </LinearLayout>
 
     <Button

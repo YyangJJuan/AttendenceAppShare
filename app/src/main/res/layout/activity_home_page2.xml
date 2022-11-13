@@ -8,34 +8,24 @@
     android:paddingRight="15dp"
     android:orientation="vertical"
     android:gravity="center">
+<!--ListView分组头部-->
 
-    <!--   <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/putgroups"
-        android:text="我发起的签到群"
-        android:textSize="30sp"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/joingroups"
-        android:text="我参与的签到群"
-        android:textSize="30sp"
-        />
--->
     <ImageView
         android:id="@+id/expandable_list_group_image"
         android:layout_width="16dp"
         android:layout_height="16dp"
-        android:scaleType="fitCenter"/>
+        android:scaleType="fitCenter" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/expandable_list_group_name"
         android:layout_marginLeft="16dp"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:paddingLeft="10dp"
+         />
+
 
 </LinearLayout>

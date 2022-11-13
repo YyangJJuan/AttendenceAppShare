@@ -18,18 +18,15 @@ import java.util.ConcurrentModificationException;
 import java.util.List;
 
 public class MyAdapter extends BaseExpandableListAdapter {
-        private Context mContext;
-        private List<String> mGroupList;//群组
-        private List<List<group>>mChildList;//群组的学生群
+    private Context mContext;
+    private List<String> mGroupList;
+    private List<List<group>> mChildList;
 
-        //构造函数
-        public MyAdapter(Context context, List<String> group, List<List<group>> child)
-        {
-            mContext = context;
-            mGroupList = group;
-            mChildList = child;
-        }
-
+    public MyAdapter(Context context, List<String> group, List<List<group>> child){
+        mContext = context;
+        mGroupList = group;
+        mChildList = child;
+    }
 
     @Override
     public int getGroupCount(){
@@ -73,7 +70,7 @@ public class MyAdapter extends BaseExpandableListAdapter {
 
     /**
      *
-     * 返回外面那层布局的视图
+     * 返回分组头部的视图
      * @param groupPosition  组位置
      * @param isExpanded   该组是展开状态还是伸缩状态，true=展开
      * @param convertView   重用已有的视图对象
@@ -81,36 +78,38 @@ public class MyAdapter extends BaseExpandableListAdapter {
      * @return
      */
     @Override
-    public View getGroupView(int groupPosition , boolean isExpanded, View convertView, ViewGroup parent) {
+    public View getGroupView(int groupPosition, boolean isExpanded, View convertView,
+                             ViewGroup parent){
         GroupViewHolder viewHolder;
-        if (convertView == null){//如果重用视图不存在则创造，如果存在则重用，提高加载速率
+        if (convertView == null){
             convertView = LayoutInflater.from(mContext).inflate(
                     R.layout.activity_home_page2, parent,false);
             viewHolder = new GroupViewHolder();
-            viewHolder.groupImage = convertView
+            viewHolder.groupImage = (ImageView) convertView
                     .findViewById(R.id.expandable_list_group_image);
-            viewHolder.groupName = convertView
+            viewHolder.groupName = (TextView) convertView
                     .findViewById(R.id.expandable_list_group_name);
             convertView.setTag(viewHolder);
         }else{
             viewHolder = (GroupViewHolder)convertView.getTag();
         }
 
-        if (isExpanded){
-            viewHolder.groupImage.setImageResource(R.drawable.list_image_open);
-        }else {
-            viewHolder.groupImage.setImageResource(R.drawable.list_image_close);
-        }
+        //if (isExpanded){
+          //  viewHolder.groupImage.setImageResource(R.drawable.list_image_open);
+        //}else {
+          //  viewHolder.groupImage.setImageResource(R.drawable.list_image_close);
+        //}
         viewHolder.groupName.setText(mGroupList.get(groupPosition));
         return convertView;
     }
+
 
     private class GroupViewHolder{
         private ImageView groupImage;
         private TextView groupName;
     }
 
-
+    //返回子项视图
     @Override
     public View getChildView(int groupPositon, int childPosition, boolean isLastChild,
                              View convertView, ViewGroup parent){

@@ -94,11 +94,11 @@ public class MyAdapter extends BaseExpandableListAdapter {
             viewHolder = (GroupViewHolder)convertView.getTag();
         }
 
-        //if (isExpanded){
-          //  viewHolder.groupImage.setImageResource(R.drawable.list_image_open);
-        //}else {
-          //  viewHolder.groupImage.setImageResource(R.drawable.list_image_close);
-        //}
+        if (isExpanded){
+            viewHolder.groupImage.setImageResource(R.drawable.list_image_open);
+        }else {
+            viewHolder.groupImage.setImageResource(R.drawable.list_image_close);
+        }
         viewHolder.groupName.setText(mGroupList.get(groupPosition));
         return convertView;
     }

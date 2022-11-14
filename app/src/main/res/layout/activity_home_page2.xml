@@ -6,7 +6,7 @@
     android:paddingTop="25dp"
     android:paddingLeft="25dp"
     android:paddingRight="15dp"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:gravity="center">
 <!--ListView分组头部-->
 

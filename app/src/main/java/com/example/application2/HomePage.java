@@ -48,7 +48,7 @@ public class HomePage extends AppCompatActivity {
         groups.add(createdGroup);
         groups.add(joinedGroup);
         mAdapter = new MyAdapter(this, groupNames, groups);
-        mGroupList=(ExpandableListView) findViewById(R.id.expandablelistview_id);
+        mGroupList=(ExpandableListView) findViewById(R.id.expandable_listview);
         mGroupList.setAdapter(mAdapter);
     }
 

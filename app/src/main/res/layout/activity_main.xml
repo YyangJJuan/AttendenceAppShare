@@ -32,6 +32,7 @@
             android:paddingLeft="20dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/edit_text_bg"
+            android:id="@+id/name"
             /><!--paddingLeft 空格内距离空格边框左边的距离-->
     </LinearLayout>
 
@@ -58,7 +59,8 @@
             android:hint="请输入密码"
             android:inputType="numberPassword"
             android:paddingLeft="20dp"
-            android:textSize="18sp" /><!--paddingLeft 空格内距离空格边框左边的距离-->
+            android:textSize="18sp"
+            android:id="@+id/password"/><!--paddingLeft 空格内距离空格边框左边的距离-->
     </LinearLayout>
 
     <LinearLayout

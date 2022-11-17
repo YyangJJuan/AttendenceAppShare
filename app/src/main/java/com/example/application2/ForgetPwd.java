@@ -10,5 +10,6 @@ public class ForgetPwd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_pwd);
+        getSupportActionBar().setTitle("找回密码");
     }
 }

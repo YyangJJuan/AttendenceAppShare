@@ -32,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().setTitle("登录");
     }
+
+    public void GoRegister(View v)
+    {
+        //intent设置要跳转的页面
+        Intent intent = new Intent(this,register.class);
+        //进行跳转
+        startActivity(intent);
+    }
     public void GoSecond(View v)
     {
         //intent设置要跳转的页面

@@ -15,6 +15,7 @@ import java.util.ResourceBundle;
 public class connectMysql {
    private static  final String DATA_BASE_NAME = "user";
    private static  String driver = "com.mysql.jdbc.Driver";
+   //192.168.43.78
    private  static  String url =  "jdbc:mysql://192.168.43.78/dbbook2?user=root&password=123456&useUnicode=true&characterEncoding=utf-8&useSSL=true";
    //private  static  String user = "root";
    //private  static  String password = "123456";

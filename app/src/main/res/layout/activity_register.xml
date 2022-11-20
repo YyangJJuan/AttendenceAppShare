@@ -26,6 +26,7 @@
             android:paddingLeft="20dp"
             android:layout_marginLeft="15dp"
             android:background="@drawable/edit_text_bg"
+            android:id="@+id/et_name"
             /><!--paddingLeft 空格内距离空格边框左边的距离-->
     </LinearLayout>
 
@@ -46,7 +47,8 @@
             android:hint="请输入密码"
             android:inputType="numberPassword"
             android:paddingLeft="20dp"
-            android:textSize="18sp" /><!--paddingLeft 空格内距离空格边框左边的距离-->
+            android:textSize="18sp"
+            android:id="@+id/et_password1"/><!--paddingLeft 空格内距离空格边框左边的距离-->
     </LinearLayout>
 
     <LinearLayout
@@ -66,7 +68,8 @@
             android:hint="请确认密码"
             android:inputType="numberPassword"
             android:paddingLeft="20dp"
-            android:textSize="18sp" /><!--paddingLeft 空格内距离空格边框左边的距离-->
+            android:textSize="18sp"
+            android:id="@+id/et_password2"/><!--paddingLeft 空格内距离空格边框左边的距离-->
     </LinearLayout>
 
     <LinearLayout
@@ -131,6 +134,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
+        android:onClick="go"
+        tools:ignore="onClick"
         />
 
 </LinearLayout>

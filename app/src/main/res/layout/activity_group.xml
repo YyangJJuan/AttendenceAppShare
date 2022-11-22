@@ -17,6 +17,7 @@
         />
 
     <FrameLayout
+        android:background="@drawable/img_1"
         android:id="@+id/group_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -38,8 +39,33 @@
             android:layout_width="124dp"
             android:layout_height="98dp"
             android:layout_gravity="right" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <TextView
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_image"
+                android:layout_width="102dp"
+                android:layout_height="93dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:src="@drawable/user_image"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:id="@+id/name2"
+                android:gravity="center"
+                android:textSize="60dp"/>
+
+
+        </LinearLayout>
+
+
+        <Button
             android:id="@+id/deliver_sign_in"
             android:layout_width="146dp"
             android:layout_height="50dp"
@@ -47,47 +73,70 @@
             android:layout_marginTop="110dp"
             android:text="发布签到"
             android:textColor="@color/black"
-            android:textSize="30dp" />
+            android:textSize="24dp" />
 
-        <TextView
+        <Button
             android:id="@+id/add_groupman"
             android:layout_width="102dp"
             android:layout_height="50dp"
-            android:layout_marginLeft="300dp"
+            android:layout_marginLeft="250dp"
             android:layout_marginTop="110dp"
             android:text="邀请"
+            android:textColor="@color/black"
+            android:textSize="27dp" />
+
+        <TextView
+            android:layout_width="102dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="180dp"
+            android:text="组成员"
             android:textColor="@color/black"
             android:textSize="30dp" />
 
 
-        <Button
-            android:id="@+id/edit_anouncement"
-            android:layout_width="110dp"
-            android:layout_height="51dp"
+        <TextView
+            android:id="@+id/group_member"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:gravity="center"
             android:layout_gravity="left"
-            android:layout_marginTop="300dp"
-            android:text="编辑公告"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="225dp"
+            android:background="@drawable/img_4"
             android:textColor="@color/black"
             android:textSize="30dp" />
 
         <TextView
+            android:id="@+id/edit_anouncement"
+            android:layout_width="122dp"
+            android:layout_height="55dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="360dp"
+            android:text="编辑公告"
+            android:textSize="30dp"
+            android:textColor="@color/teal_200"/>
+
+        <TextView
             android:id="@+id/anouncement_show"
-            android:layout_width="109dp"
-            android:layout_height="wrap_content"
+            android:layout_width="401dp"
+            android:layout_height="166dp"
             android:layout_gravity="center"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/img_2"
             android:textColor="@color/black"
             android:textSize="30dp" />
 
         <TextView
             android:id="@+id/sign_in"
             android:layout_width="match_parent"
-            android:layout_height="141dp"
+            android:layout_height="87dp"
             android:layout_gravity="bottom"
+            android:background="@color/colorAccent"
             android:gravity="center"
             android:text="签     到"
             android:textColor="@color/black"
-            android:background="@color/colorAccent"
             android:textSize="40dp"
             android:textStyle="bold" />
     </FrameLayout>

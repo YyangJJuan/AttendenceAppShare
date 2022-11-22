@@ -163,17 +163,20 @@ public class HomePage extends AppCompatActivity {
                 //    intent.putExtra("admin",signGroup.getAdminId());
                 //    startActivity(intent);
                 //} else {
-                Intent intent = new Intent(HomePage.this,GroupActivity.class);
-                boolean isCreate;
-                if (groupPosition==0) {
-                    isCreate = true;
-                }else {
-                    isCreate = false;
-                }
-                intent.putExtra("group_id",group.getNumber());
-                intent.putExtra("isCreate",isCreate);
-                intent.putExtra("group_name",group.getName());
-                startActivity(intent);
+
+                    Intent intent = new Intent(HomePage.this,GroupActivity.class);
+                    boolean isCreate;
+                    if (groupPosition==0) {
+                        isCreate = true;
+                    }else {
+                        isCreate = false;
+                    }
+                    intent.putExtra("group_id",group.getNumber());
+                    intent.putExtra("isCreate",isCreate);
+                    intent.putExtra("group_name",group.getName());
+                    startActivity(intent);
+
+
                 //}
 
                 return true;

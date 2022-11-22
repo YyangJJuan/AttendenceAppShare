@@ -46,7 +46,6 @@
         <EditText
             android:layout_width="350dp"
             android:layout_height="60dp"
-            android:textColor="@color/colorPrimaryDark"
             android:textSize="30dp"
             android:textStyle="bold"
             android:gravity="center"
@@ -55,6 +54,18 @@
             android:layout_below="@+id/select_group_image"
             android:theme="@style/MyEditText"
             android:hint="群聊名称"
+            android:layout_gravity="center_horizontal"/>
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="60dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/group_mem"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/select_group_image"
+            android:theme="@style/MyEditText"
+            android:hint="群成员"
             android:layout_gravity="center_horizontal"/>
 
     </LinearLayout>

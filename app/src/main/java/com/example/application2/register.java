@@ -18,11 +18,11 @@ public class register extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        getSupportActionBar().setTitle("注册账号");
     }
 
 
-    /*public void go(View v)
+    public void go(View v)
     {
         EditText name = (EditText) findViewById(R.id.et_name);
         EditText pwd1 = (EditText) findViewById(R.id.et_password1);
@@ -45,7 +45,7 @@ public class register extends AppCompatActivity {
                 }
             }
         }.start();
-    }*/
+    }
 
     @SuppressLint("HandlerLeak")
     final Handler hand2 = new Handler() {

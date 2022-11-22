@@ -24,6 +24,7 @@ import java.sql.SQLException;
 
 public class CreateGroupActivity extends AppCompatActivity {
     private EditText groupName;
+    private  EditText groupMember;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,14 +41,16 @@ public class CreateGroupActivity extends AppCompatActivity {
     private void add_Group()
     {
         groupName = findViewById(R.id.group_name);
+        groupMember = findViewById(R.id.group_mem);
         String name = groupName.getText().toString();
+        String member = groupMember.getText().toString();
         String username = MainActivity.username;
         final int[] msg = {0};
         new Thread(){
             public void run ()
             {
                 Connection connection = connectMysql.getConnection();
-                String sql1 = "select groupName from CreateGroups where groupName = ?";
+                String sql1 = "select groupName from creategroups where groupName = ?";
                 if (connection != null)
                 {
                     PreparedStatement ps = null;
@@ -60,11 +63,10 @@ public class CreateGroupActivity extends AppCompatActivity {
                         {
                             msg[0]=2;//群组已经存在
                         }else{
-                            String sql = "insert into CreateGroups(groupName,id,member) values(?,?,?)";
+                            String sql = "insert into creategroups(groupName,member) values(?,?)";
                             ps2 = connection.prepareStatement(sql);
                             ps2.setString(1,name);
-                            ps2.setInt(2,7);
-                            ps2.setString(3,username);
+                            ps2.setString(2,member);
                             int count = ps2.executeUpdate();
                             if (count > 0)
                             {

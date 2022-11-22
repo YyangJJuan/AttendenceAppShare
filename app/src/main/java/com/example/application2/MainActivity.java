@@ -25,7 +25,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private  final MainActivity mainActivity = this;
-
+    static String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
     {
          EditText name = findViewById(R.id.name);
          EditText password = findViewById(R.id.password);
+         username = name.getText().toString();
 //连接数据库的请求要放在一个新的线程中，不能直接在当前线程请求连接数据库
          new Thread(){
              public void run ()

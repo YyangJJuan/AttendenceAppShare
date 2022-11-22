@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GroupActivity">
+    <android.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent"
+        android:elevation="12dp"
+        android:id="@+id/group_tool_bar"
+        app:titleTextColor="#fff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+
+    <FrameLayout
+        android:id="@+id/group_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/group_name_show"
+            android:layout_width="284dp"
+            android:layout_height="98dp"
+            android:layout_gravity="top"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/host"
+            android:layout_width="284dp"
+            android:layout_height="34dp"
+            android:layout_gravity="" />
+        <TextView
+            android:id="@+id/group_id_show"
+            android:layout_width="124dp"
+            android:layout_height="98dp"
+            android:layout_gravity="right" />
+
+        <TextView
+            android:id="@+id/deliver_sign_in"
+            android:layout_width="146dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="110dp"
+            android:text="发布签到"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/add_groupman"
+            android:layout_width="102dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="110dp"
+            android:text="邀请"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+
+        <Button
+            android:id="@+id/edit_anouncement"
+            android:layout_width="110dp"
+            android:layout_height="51dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="300dp"
+            android:text="编辑公告"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/anouncement_show"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="110dp"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="141dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="签     到"
+            android:textColor="@color/black"
+            android:background="@color/colorAccent"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    />
+
+
+</LinearLayout>

@@ -13,21 +13,21 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class register extends AppCompatActivity {
-
+    static String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-       // go();
+
     }
 
 
-    public void go(View v)
+    /*public void go(View v)
     {
         EditText name = (EditText) findViewById(R.id.et_name);
         EditText pwd1 = (EditText) findViewById(R.id.et_password1);
         EditText pwd2 = (EditText) findViewById(R.id.et_password2);
-        String username = name.getText().toString();
+        username = name.getText().toString();
         String password1 = pwd1.getText().toString();
         String password2 = pwd2.getText().toString();
         new Thread(){
@@ -45,8 +45,7 @@ public class register extends AppCompatActivity {
                 }
             }
         }.start();
-    }
-
+    }*/
 
     @SuppressLint("HandlerLeak")
     final Handler hand2 = new Handler() {

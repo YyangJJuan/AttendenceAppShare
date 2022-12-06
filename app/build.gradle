@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'com.mob.sdk'
 }
+//apply plugin:'com.android.library'
 //apply plugin: 'com.mob.sdk'
 
 MobSDK {

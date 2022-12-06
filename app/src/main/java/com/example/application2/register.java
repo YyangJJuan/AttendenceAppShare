@@ -8,17 +8,44 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.text.TextUtils;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.mob.MobSDK;
+
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
 
 public class register extends AppCompatActivity {
     static String username;
+    private TimerTask timerTask;
+    private Timer timer;
+    private EditText phone_enter;
+    private EditText text_enter;
+    private Button text_get;
+    private Button commit;
+    private int TIME = 60;//倒计时60s
+    public String country = "86";//中国区号
+    private String phone;
+    private static final int CODE_REPEAT = 1;//重新发送
+    public TextView tv_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         getSupportActionBar().setTitle("注册账号");
+       // MobSDK.init(this, "370418d0f08ef", "924dc49c275c3424600306f6ae24cada");    //mob,参数为appkey和appsecret
+       // SMSSDK.registerEventHandler(eh);//注册短信回调（记得销毁，避免泄露内存）
+        //initView();
     }
 
 

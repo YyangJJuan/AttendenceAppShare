@@ -10,18 +10,26 @@
 
     <!--快速圆形的ImageView,非常适合个人资料图像-->
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/expandable_list_child_image"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:src="@drawable/user_image"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/expandable_list_child_image"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/user_image"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/expandable_list_child_name"
-        android:layout_marginLeft="16dp"
-        android:singleLine="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandable_list_child_name"
+            android:layout_marginLeft="16dp"
+            android:singleLine="true" />
+       <!-- <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/expandable_list_child_signIn"
+            android:text="签到"
+            android:layout_marginLeft="32dp"
+            android:textSize="20dp"/>
+-->
 
 
 </LinearLayout>

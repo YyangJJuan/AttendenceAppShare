@@ -35,6 +35,7 @@ public class HomePage extends AppCompatActivity {
     private List<group> joinedGroup;
     private ImageView imageView= null;
     private ImageView imageView2 = null;
+    private de.hdodenhof.circleimageview.CircleImageView     imageView3 = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -126,6 +127,44 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+        //点击头像
+        imageView3 = findViewById(R.id.user_image);
+        imageView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popupMenu = new PopupMenu(HomePage.this,view);
+                //创建弹出式菜单
+                popupMenu.inflate(R.menu.home_menu);
+                //将自制的弹出布局绑定菜单
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                       switch (menuItem.getItemId()){
+                            case R.id.search_info:
+                            {
+                                Intent intent = new Intent(HomePage.this,PersonInfo.class);
+                                //进行跳转
+                                startActivity(intent);
+                                break;
+                            }
+                           case R.id.manage_group:
+                           {
+                               Intent intent = new Intent(HomePage.this,ManageGroup.class);
+                               //进行跳转
+                               startActivity(intent);
+                              break;
+                           }
+                        }
+
+                        return  true;
+                    }
+                });
+                //弹出式菜单的单击事件
+                popupMenu.show();
+
+            }
+        });
+
 
        /* imageView2 =findViewById(R.id.search);
         imageView2.setOnClickListener(new View.OnClickListener() {
@@ -182,6 +221,10 @@ public class HomePage extends AppCompatActivity {
                 return true;
             }
         });
+
+
+
+
     }
 
 

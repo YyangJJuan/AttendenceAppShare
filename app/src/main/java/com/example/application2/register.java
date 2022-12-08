@@ -1,5 +1,8 @@
 package com.example.application2;
 
+import static android.content.ContentValues.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -9,9 +12,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,29 +31,16 @@ import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
 
 public class register extends AppCompatActivity {
-    static String username;
-    private TimerTask timerTask;
-    private Timer timer;
-    private EditText phone_enter;
-    private EditText text_enter;
-    private Button text_get;
-    private Button commit;
-    private int TIME = 60;//倒计时60s
-    public String country = "86";//中国区号
-    private String phone;
-    private static final int CODE_REPEAT = 1;//重新发送
-    public TextView tv_back;
+    private  String username;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         getSupportActionBar().setTitle("注册账号");
-       // MobSDK.init(this, "370418d0f08ef", "924dc49c275c3424600306f6ae24cada");    //mob,参数为appkey和appsecret
-       // SMSSDK.registerEventHandler(eh);//注册短信回调（记得销毁，避免泄露内存）
-        //initView();
+        //MobSDK.init(this, "370418d0f08ef", "924dc49c275c3424600306f6ae24cada");    //mob,参数为appkey和appsecret
+
     }
-
-
     public void go(View v)
     {
         EditText name = (EditText) findViewById(R.id.et_name);
